@@ -1,0 +1,237 @@
+/* FONTS IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* "Montserrat" */
+
+body {
+    background-color: #ffa07a;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff30f;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin: 1.35rem 0;
+}
+
+
+/*NAVIGATION FIXED for DESKTOP*/
+nav {
+    width: 100%;
+    background-color: #008080;
+    color: #ffa07a;
+    position: fixed;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 10;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav li {
+    float: left;
+    padding: 0.7rem 2rem;
+}
+
+nav a {
+    color: #ffa07a;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.mobile {
+    display: none;
+}
+
+/* HEADER WITH H1 AND BACKGROUND IMAGE */
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 2.9rem;
+    width: 100%;
+    height: 500px;
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 65%;
+    background-size: cover;
+}
+
+.header_text {
+    width: 100%;
+    background-color: rgba(127,79,61,.9);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* TEXT SECTION */
+.text_section {
+    max-width: 1200px;
+    position: relative;
+    top: 2.9rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.text_section_inside_div {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+.yellow_text {
+    color: #fff30f;
+}
+
+.green_bg {
+    background-color: #008080;
+    position: relative;
+    top: 2.9rem;
+}
+
+/* IMAGES FLEX */
+.image_flex {
+    position: relative;
+    top: 2.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding: 4rem 0;
+}
+
+.image_flex img {
+    width: 30%;
+    transition: transform .2s;
+}
+
+.image_flex img:hover {
+    transform: scale(1.3);
+}
+
+.big_banner_flex {
+    position: relative;
+    top: 2.9rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.big_banner_flex img {
+    margin-bottom: 2rem;
+    width: 40%;
+}
+
+/* FOOTER */
+#footer {
+    width: 100%;
+    background-color: #008080;
+    color: #ffa07a;
+    position: relative;
+    top: 2.9rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#footer_mobile {
+    display: none;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+    }
+
+    .mobile a {
+        text-decoration: none;
+        color: white;
+        background-color: #008080;
+        border: 1px solid #ffa07a;
+        padding: 0.5rem;
+    }
+
+    header {
+        background-position: center;
+    }
+
+    header,
+    .text_section,
+    .green_bg,
+    .image_flex,
+    .big_banner_flex,
+    #footer {
+        top: 0;
+    }
+
+    .image_flex {
+        padding: 2rem;
+    }
+
+    .image_flex img {
+        width: 90%;
+    }
+
+    .image_flex img+img {
+        margin-top: 1rem;
+    }
+
+    .text_section,
+    .text_section_inside_div {
+        width: 90%;
+    }
+
+    .big_banner_flex {
+        width: 90%;
+    }
+
+    .big_banner_flex img {
+        width: 85%;
+    }
+
+    #footer {
+        display: none;
+    }
+
+    #footer_mobile {
+        display: block;
+        background-color: #008080;
+        position: relative;
+        padding: 0.7rem 0;
+        font-size: 1.1rem;
+    }
+}
